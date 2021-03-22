@@ -37,7 +37,10 @@ Start the ksqlDB CLI locally, so that we can run some queries:
 
 Create the `movies` table which will contain movie data:
 
-`CREATE TABLE movies (ID INT PRIMARY KEY, title VARCHAR, release_year INT) WITH (kafka_topic='movies', partitions=1, value_format='avro');`
+```
+CREATE TABLE movies (ID INT PRIMARY KEY, title VARCHAR, release_year INT)
+    WITH (kafka_topic='movies', partitions=1, value_format='avro');
+```
 
 Insert data into the `movies` table:
 
@@ -53,7 +56,10 @@ INSERT INTO movies (id, title, release_year) VALUES (780, 'Super Mario Bros.', 1
 
 The `ratings` stream will contain events when users submit ratings for various movies:
 
-`CREATE STREAM ratings (MOVIE_ID INT KEY, rating DOUBLE) WITH (kafka_topic='ratings', partitions=1, value_format='avro');`
+```
+CREATE STREAM ratings (MOVIE_ID INT KEY, rating DOUBLE)
+    WITH (kafka_topic='ratings', partitions=1, value_format='avro');
+```
 
 Insert data into the `ratings` stream:
 
