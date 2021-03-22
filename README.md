@@ -100,4 +100,6 @@ To see what's in the `rated_movies` stream, run the following command:
 
 Run the following command to run the tests locally:
 
-`docker exec ksqldb-cli ksql-test-runner -i /opt/app/test/testData.json -s /opt/app/src/statements.sql -o /opt/app/test/testResults.json`
+```
+docker exec ksqldb-cli ksql-test-runner -i /opt/app/test/testData.json -s /opt/app/src/statements.sql -o /opt/app/test/testResults.json
+````
