@@ -27,11 +27,11 @@ duality.
 
 First, go to the project root directory and run the following, to set up your docker environment:
 
-`docker-compose up -d`
+```docker-compose up -d```
 
 Start the ksqlDB CLI locally, so that we can run some queries:
 
-`docker exec -it ksqldb-cli ksql http://ksqldb-server:8088`
+```docker exec -it ksqldb-cli ksql http://ksqldb-server:8088```
 
 ### Create the Necessary Tables
 
@@ -77,7 +77,7 @@ INSERT INTO ratings (movie_id, rating) VALUES (780, 2.1);
 
 Configure the `ratings` stream, such that you consume from the very beginning of the topic:
 
-`SET 'auto.offset.reset' = 'earliest';`
+```SET 'auto.offset.reset' = 'earliest';```
 
 Create the `rated_movies` stream, which will be a join of the movies table and ratings stream:
 
@@ -94,7 +94,7 @@ CREATE STREAM rated_movies
 
 To see what's in the `rated_movies` stream, run the following command:
 
-`PRINT rated_movies FROM BEGINNING LIMIT 9;`
+```PRINT rated_movies FROM BEGINNING LIMIT 9;```
 
 ## Run Project Tests
 
