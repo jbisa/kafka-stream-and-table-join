@@ -17,6 +17,8 @@ Although streams and tables are meant to be used to solve different problems, th
 Data from a stream can be easily turned into a table and vice versa. This is known as the stream-table
 duality.
 
+This project is from a `Confluent` tutorial on ksqlDB: https://kafka-tutorials.confluent.io/join-a-stream-to-a-table/ksql.html
+
 # Dependencies
 
 - Docker
