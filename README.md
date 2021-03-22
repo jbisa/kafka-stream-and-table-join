@@ -1,14 +1,14 @@
 # Join Kafka Stream and Table
 
 There are times you may need to some filtering or data aggregation between several Kafka topics. One way to
-achieve this, is by joining a Kafka "stream" with a Kafka "table".
+achieve this, is by joining a Kafka `stream` with a Kafka `table`.
 
-A stream is a set of continuous, immutable data. It is an append-only concept, where existing events (aka
+A **stream** is a set of continuous, immutable data. It is an append-only concept, where existing events (aka
 records/messages) cannot be modified. Streams are persistent, durable, and fault tolerant. Events in a stream
 can be keyed, and there is a one-to-many mapping between keys and events. A stream is basically like a table
 in a relational DB (RDBMS), that has no unique key constraint and that is append-only.
 
-A table on the other hand, is a set of immutable data. New events (or rows/records/messages) can be inserted,
+A **table** on the other hand, is a set of immutable data. New events (or rows/records/messages) can be inserted,
 updated, and deleted. Like streams, tables are persistent, durable, and fault tolerant. A table is basically a
 materialized view in RDBMS, because it is being changed automatically under-the-hood, as soon as any of its
 input streams or tables change (you don't actually need to manually insert, update, or delete records).
